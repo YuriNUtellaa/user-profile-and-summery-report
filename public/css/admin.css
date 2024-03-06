@@ -1,0 +1,258 @@
+/* RENT & RESERVATIONS */
+.table-container {
+    width: 50%;
+    margin: 20px auto;
+    /* overflow-x: auto; Enables horizontal scrolling for smaller screens */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px; /* Adds space between tables */
+}
+
+th, td {
+    border: 1px solid #ddd; /* Light grey border for the cells */
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: rgb(74, 83, 118); /* Dark background for header cells */
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Zebra striping for rows */
+}
+
+/* Header Styles */
+.history-header {
+    background-color: #4a5376; /* Dark blue background to match your theme */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 0; /* Removes any top margin for tight fit with the content above */
+    border-radius: 5px 5px 0 0; /* Rounded corners for the top */
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 20px;
+    color: #4a5376; /* Dark blue color to match your header */
+    margin: 10px 0;
+}
+
+/* Action Links */
+    .action-link {
+        color: #4a5376; /* Dark blue color to match your theme */
+        text-decoration: none;
+        margin-right: 10px; /* Space between action links */
+    }
+
+    .action-link:hover {
+        text-decoration: underline; /* Adds an underline on hover for better UX */
+    }
+
+/* Action Buttons */
+    .action-button {
+        border: none;
+        background-color: #f44336; /* Red color for delete buttons */
+        color: white;
+        padding: 5px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .action-button:hover {
+        background-color: #d32f2f; /* Darker red on hover */
+    }
+
+    /* Admin History Container */
+
+    .history-container {
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adds a subtle shadow */
+        border-radius: 5px; /* Rounded corners */
+    }
+
+    .update-button {
+        background-color: #007bff; /* Blue color for update button */
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.15s ease-in-out;
+        margin: 0 5px; /* Added margin for spacing */
+    }
+
+
+    .delete-button:hover {
+        background-color: #c82333; /* Darker red on hover */
+    }
+
+    td form {
+        display: flex;
+        align-items: center;
+        gap: 5px; /* Spacing between form elements */
+    }
+
+    td form input[type="datetime-local"] {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 5px;
+        width: auto; /* Adjust width to content */
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .table-container {
+            width: 90%;
+            margin: 20px 5%;
+        }
+
+        th, td {
+            padding: 8px 4px; /* Smaller padding for smaller screens */
+        }
+
+        td form {
+            flex-direction: column; /* Stack form elements on small screens */
+        }
+
+        td form input[type="datetime-local"], .action-button {
+            width: 100%; /* Full width on small screens */
+        }
+    }
+
+
+
+/* USER MANAGEMENT */
+
+.content{
+    padding: 5%;
+}
+
+.user-management-container {
+    max-width: 2000px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+
+.user-management-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    border: 1px solid #dee2e6;
+}
+
+.user-management-table th,
+.user-management-table td {
+    padding: 8px; /* Adjust padding for less white space */
+    border: 1px solid #dee2e6;
+    vertical-align: middle; /* Align the content in the middle vertically */
+}
+
+.user-management-table thead th {
+    background-color: rgb(74, 83, 118);
+    color: #ffffff;
+}
+
+.user-management-table tbody tr:nth-of-type(even) {
+    background-color: #f2f2f2;
+}
+
+.user-management-table tbody tr:hover {
+    background-color: #dddfe2;
+}
+
+.user-management-table td:empty {
+    background-color: #fff;
+}
+
+/* Adjust column widths as needed */
+.user-management-table th:nth-child(1) {
+    width: 5%; /* ID column width */
+}
+
+.user-management-table th:nth-child(2),
+.user-management-table th:nth-child(3),
+.user-management-table th:nth-child(4),
+.user-management-table th:nth-child(5) {
+    width: 15%; /* Adjust width for other columns as needed */
+}
+
+.user-management-table th:nth-child(6) {
+    width: 10%; /* Image column width */
+}
+
+.user-management-table th:nth-child(7) {
+    width: 10%; /* Type column width, adjust if needed */
+}
+
+.user-management-table th:nth-child(8) {
+    width: 15%; /* Actions column width */
+}
+
+.user-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+.user-management-table input[type="text"],
+.user-management-table input[type="password"],
+.user-management-table input[type="email"],
+.user-management-table input[type="file"],
+.user-management-table select {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    margin: 2px 0;
+    border: 1px solid #ced4da;
+    border-radius: 0.26rem;
+    width: auto; /* Change from 100% to auto to accommodate content width */
+    min-width: 150px; /* Set a minimum width to handle short content */
+}
+
+/* Update Button */
+.update-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+    margin-right: 5px;
+}
+
+.update-button:hover {
+    background-color: #0056b3;
+}
+
+/* Delete Button */
+.delete-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+/* Responsive Table */
+@media screen and (max-width: 768px) {
+    .user-management-table-container {
+        overflow-x: auto;
+    }
+}

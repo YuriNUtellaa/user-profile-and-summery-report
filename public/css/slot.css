@@ -1,0 +1,310 @@
+section.home-section {
+    margin-top: 70px;
+    height: auto;
+    background-color: #eee;
+}
+
+div.overall-slots{
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgb(74, 83, 118);
+    padding: 2.5%;
+}
+
+.center-text h2 {
+    color: #111;
+    font-size: 28px;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.center-text span {
+    color: rgb(232, 113, 33);
+}
+
+.slots {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    gap: 1rem;
+    margin: 5%;
+}
+
+.slot{
+    min-height: 270px;
+}
+
+.available {
+    position: relative;
+    width: 250px;
+    height: auto;
+    margin: 3%;
+    transition: all .4s;
+    border: 3px solid rgb(74, 83, 118);
+    background-color: #fff;
+    padding: 30px;
+    padding-top: 90px;
+    padding-bottom: 15px;
+    box-shadow: 0px 0px 0px 10px rgba(210, 198, 198, 0.08);
+}
+
+.occupied {
+    position: relative;
+    width: 250px;
+    height: auto;
+    margin: 3%;
+    transition: all .4s;
+    border: 3px solid rgb(128, 128, 128);
+    background-color: #dedede;
+    padding: 30px;
+    padding-top: 90px;
+    padding-bottom: 15px;
+    box-shadow: 0px 0px 0px 10px rgba(210, 198, 198, 0.08);
+}
+
+.reserved {
+    position: relative;
+    width: 250px;
+    height: auto;
+    margin: 3%;
+    transition: all .4s;
+    border: 3px solid rgb(232, 113, 33);
+    background-color: #fff;
+    padding: 30px;
+    padding-top: 90px;
+    padding-bottom: 15px;
+    box-shadow: 0px 0px 0px 10px rgba(210, 198, 198, 0.08);
+}
+
+.available:hover {
+    transform: scale(0.95);
+    cursor: pointer;
+}
+
+.occupied:hover {
+    cursor: pointer;
+}
+
+.reserved:hover {
+    cursor: pointer;
+}
+
+.available p, span, 
+.occupied p, span, 
+.reserved p, span   {
+    text-align: center;
+}
+
+.overall-slots h2[name="heading"]{
+    font-size: 20px;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    color: #fff;
+    margin: 0; /* Reset margin */
+    margin-bottom: 20px;
+    display: flex; /* Use Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background-color: rgb(74, 83, 118);
+}
+
+.available h2{
+    width: 215px;
+    position: absolute;
+    top: 35px;
+    left: 12px;
+    background-color: rgb(232, 113, 33);
+    color: #fff;
+    padding: 3%;
+    text-align: center;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.occupied h2{
+    width: 215px;
+    position: absolute;
+    top: 35px;
+    left: 12px;
+    background-color: rgb(128, 128, 128);
+    color: #fff;
+    padding: 3%;
+    text-align: center;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.reserved h2{
+    width: 215px;
+    position: absolute;
+    top: 35px;
+    left: 12px;
+    background-color: rgb(228, 172, 135);
+    color: #fff;
+    padding: 3%;
+    text-align: center;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.available h5 {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: rgb(74, 83, 118);
+    padding: 3px 10px;
+    border-radius: 2px;
+}
+
+.occupied h5 {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: rgb(128, 128, 128);
+    padding: 3px 10px;
+    border-radius: 2px;
+}
+
+.reserved h5 {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: rgb(228, 172, 135);
+    padding: 3px 10px;
+    border-radius: 2px;
+}
+
+
+/* BUTTONS */
+
+
+button[name="blue"]{
+    width: 180px;
+    background-color: #fff;
+    border: 3px solid rgb(74, 83, 118);
+    color: rgb(74, 83, 118);
+    padding: 3%;
+    text-align: center;
+    font-size: 15px;
+    margin: 4px 2px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button[name="orange"] {
+    width: 180px;
+    background-color: #fff;
+    border: 3px solid rgb(232, 113, 33);
+    color: rgb(232, 113, 33);
+    padding: 3%;
+    text-align: center;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button[name="details"]{
+    width: 180px;
+    background-color: #fff;
+    border: 3px solid rgb(74, 83, 118);
+    color: rgb(74, 83, 118);
+    padding: 3%;
+    text-align: center;
+    font-size: 15px;
+    margin: 4px 2px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button[name="gray"]{
+    width: 180px;
+    background-color: #fff;
+    border: 3px solid rgb(128, 128, 128);
+    color: rgb(128, 128, 128);
+    padding: 3%;
+    text-align: center;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button[name="cancel"] {
+    width: 180px;
+    background-color: #fff;
+    border: 3px solid rgb(232, 113, 33);
+    color: rgb(232, 113, 33);
+    padding: 3%;
+    text-align: center;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button[name="blue"]:hover{
+    background-color: rgb(74, 83, 118);
+    border: solid 3px rgb(74, 83, 118);
+    transform: scale(0.97);
+    color: #fff;
+}
+
+button[name="orange"]:hover {
+    background-color: rgb(232, 113, 33);
+    transform: scale(0.97);
+    color: #fff;
+}
+
+button[name="details"]:hover{
+    background-color: rgb(74, 83, 118);
+    border: solid 3px rgb(74, 83, 118);
+    transform: scale(0.97);
+    color: #fff;
+}
+
+button[name="cancel"]:hover {
+    background-color: rgb(232, 113, 33);
+    transform: scale(0.97);
+    color: #fff;
+}
+
+/* INPUT FOR RESERVATION */
+
+    input[name="start_time"]{
+        width: 180px;
+        margin: 4px 2px;
+        text-align: center;
+        padding: auto;
+        border: solid 3px rgb(74, 83, 118);
+        color: rgb(74, 83, 118);
+    }
+
+    input[name="end_time"]{
+        width: 180px;
+        margin: 4px 2px;
+        text-align: center;
+        padding: auto;
+        border: solid 3px rgb(232, 113, 33);
+        color: rgb(232, 113, 33);
+    }
